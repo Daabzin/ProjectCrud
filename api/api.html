@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Usuários API</title>
+  <link rel="stylesheet" href="../style/style.css" />
+  <link rel="stylesheet" href="api.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">Meu Site</div>
+    <nav class="nav">
+      <a href="../index.html">Login</a>
+      <a href="../crud/cadastro.html">Cadastro</a>
+      <a href="../crud/perfil.html">Perfil</a>
+      <a href="../crud/listagem.html">Listagem</a>
+      <a href="api.html" class="active">API</a>
+    </nav>
+  </header>
+
+  <main class="container api-container">
+    <h2>Usuários da API</h2>
+    
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Buscar por nome..." />
+        <i class="fa fa-search search-icon"></i>
+      </div>
+    
+    <div id="loading" class="loading">Carregando dados...</div>
+    
+    <table class="user-table" id="userTable" style="display:none;">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Cidade</th>
+          <th>Rua</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="userList"></tbody>
+    </table>
+  </main>
+
+  <script src="api.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: "Montserrat", serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 1.2;
+}
+header {
+  background-color: #ffffff;
+  background: transparent;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+.nav {
+  display: flex;
+  gap: 20px;
+}
+.nav a {
+  position: relative;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 18px;
+}
+.nav a.active::after {
+  width: 100%;
+}
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+.nav a:hover::after {
+  width: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  background-color: rgba(30, 32, 44, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  margin: 60px auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  padding: 40px;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+
+.container input {
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: rgb(230, 157, 0);
+}
+
+.btn-form {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.btn-enviar,
+.btn-cadastro {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.btn-enviar {
+  background-color: #ffffff;
+  color: black;
+  border: none;
+}
+
+.btn-cadastro {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-enviar:hover {
+  background-color: #b9b9b9;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-cadastro:hover {
+  background-color: white;
+  color: black;
+}
+
+.input-icon {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon input {
+  width: 100%;
+  padding-right: 35px;
+}
+
+.input-icon .icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ccc;
+  pointer-events: none;
+  font-size: 18px;
+}
+
+.extra-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.extra-link a {
+  color: #ffffff57;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.extra-link a:hover {
+  color: #ccc;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background-color: #1e202c;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(96, 81, 155, 0.6), transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(96, 81, 155, 0.5), transparent 50%),
+    radial-gradient(circle at 50% 90%, rgba(255, 255, 255, 0.08), transparent 70%),
+    url('https://www.transparenttextures.com/patterns/gun-metal.png');
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: sans-serif;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.error-tooltip {
+  position: absolute;
+  background: rgb(230, 157, 0);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 100;
+}
+
+.error-tooltip.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.error-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: 100%; 
+  left: 15px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent rgb(230, 157, 0) transparent;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}

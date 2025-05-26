@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Perfil</title>
+  <link rel="stylesheet" href="../css/editar-perfil.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">PW3P</div>
+    <nav class="nav">
+      <a href="../index.html">Login</a>
+      <a href="cadastro.html">Cadastro</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="listagem.html">Listagem</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container perfil-container">
+      <h2>Editar Perfil</h2>
+      <form id="formEditarPerfil">
+        <input type="text" id="nome" placeholder="Nome" required />
+        <input type="email" id="email" placeholder="E-mail" required />
+        <input type="text" id="cpf" placeholder="CPF" required />
+        <input type="date" id="nascimento" required />
+        <button type="submit" class="btn-editar-perfil">Salvar Alterações</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="../js/editar-perfil.js"></script>
+</body>
+</html>

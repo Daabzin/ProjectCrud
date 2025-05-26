@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perfil do Usuário</title>
+  <link rel="stylesheet" href="../css/perfil.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">PW3P</div>
+    <nav class="nav" id="nav">
+      <a href="../index.html">Login</a>
+      <a href="cadastro.html">Cadastro</a>
+      <a href="perfil.html" class="active">Perfil</a>
+      <a href="listagem.html">Listagem</a>
+      <a href="../api/api.html">API</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container perfil-container">
+      <div class="perfil-icon">
+        <i class="fa fa-user-circle"></i>
+      </div>
+      <div class="perfil-info">
+        <div class="info-item">
+          <strong>Nome:</strong> <span id="nome"></span>
+        </div>
+        <div class="info-item">
+          <strong>E-mail:</strong> <span id="email"></span>
+        </div>
+        <div class="info-item">
+          <strong>CPF:</strong> <span id="cpf"></span>
+        </div>
+        <div class="info-item">
+          <strong>Data de Nascimento:</strong> <span id="nascimento"></span>
+        </div>
+      </div>
+
+      <button id="btnEditar" class="btn-editar-perfil">Editar Perfil</button>
+    </div>
+  </main>
+
+  <script src="../js/perfil.js"></script>
+</body>
+</html>

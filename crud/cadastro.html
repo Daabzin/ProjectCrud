@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../css/cadastro.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+     <header>
+        <div class="logo">PW3P</div>
+        <nav class="nav" id="nav">
+          <a href="../index.html">Login</a>
+          <a href="cadastro.html" class="active">Cadastro</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Cadastro</h2>
+        <form id="cadastroForm" novalidate>
+            <div class="input-icon">
+                <input type="text" id="nome" placeholder="Nome" required />
+                <span class="icon"><i class="fa-solid fa-user"></i></span>
+                <span class="validation-msg" id="nome-error"></span>
+            </div>
+            <div class="input-icon">
+                <input type="email" id="email" placeholder="E-mail" required />
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                <div class="validation-msg" id="email-error"></div>
+            </div>
+            <div class="input-icon">
+                <input type="password" id="senha" placeholder="Senha" required />
+                <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                <span class="validation-msg" id="senha-error"></span>
+            </div>
+            <div class="input-icon">
+                <input type="text" id="cpf" placeholder="CPF" required />
+                <span class="icon"><i class="fa-solid fa-id-card"></i></span>
+                <span class="validation-msg" id="cpf-error"></span>
+            </div>
+            <div class="input-icon">
+                <input type="date" id="nascimento" placeholder="Data de Nascimento" required />
+                <span class="icon"><i class="fa-solid fa-calendar"></i></span>
+                <span class="validation-msg" id="nascimento-error"></span>
+            </div>
+            <button type="submit" class="btn-enviar">Cadastrar</button>
+        </form>
+    </div>
+
+    <script src="../js/cadastro.js"></script>
+</body>
+</html>
